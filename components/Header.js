@@ -1,12 +1,15 @@
 // components/Header.js
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context'; 
 
 const Header = ({ title = '🍽️ Menu' }) => {
   return (
-    <View style={styles.header}>
-      <Text style={styles.headerTitle}>{title}</Text>
-    </View>
+   <SafeAreaView edges={['top']} style={styles.safeArea}>
+      <View style={styles.header}>
+        <Text style={styles.headerTitle}>{title}</Text>
+      </View>
+    </SafeAreaView>
   );
 };
 
